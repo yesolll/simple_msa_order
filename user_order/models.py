@@ -6,6 +6,6 @@ class Shop(models.Model):
 
 class Order(models.Model):
     shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
-    order_date = models.DateTimeField('date ordered')
+    order_date = models.DateTimeField('date ordered', auto_now_add=True)
     delivery_address = models.CharField(max_length=50)
     delivery_finish_yn = models.BooleanField(default=0)

@@ -6,7 +6,7 @@ urlpatterns = [
         'get'   : 'list', 
         'post'  : 'create',
     })),
-    path('shop/<str:idx>', ShopViewSet.as_view({
+    path('shop/<str:pk>', ShopViewSet.as_view({
         'get'   : 'retrieve', 
         'put'   : 'update',
         'delete': 'destroy',
@@ -15,7 +15,7 @@ urlpatterns = [
         'get'   : 'list', 
         'post'  : 'create',
     })),
-    path('order/<str:idx>', OrderViewSet.as_view({
+    path('order/<str:pk>', OrderViewSet.as_view({
         'get'   : 'retrieve', 
         'put'   : 'update',
         'delete': 'destroy',
