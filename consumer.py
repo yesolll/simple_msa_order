@@ -12,7 +12,7 @@ def callback(dh, method, properties, body):
     print('Received in order')
     print(body)
 
-channel.basic_consume(queue='order', on_message_callback=callback)
+channel.basic_consume(queue='order', on_message_callback=callback, auto_ack=True)
 
 print('Started consuming')
 

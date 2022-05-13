@@ -5,5 +5,6 @@ connection = pika.BlockingConnection(params)
 channel = connection.channel()
 
 def publish():
-    channel.basic_publish(exchange='', routing_key='order', body='hello!!')
+    # channel.basic_publish(exchange='', routing_key='order', body='hello!!')
     # body를 routing_key로 전달하겠다. (~>consumer)
+    channel.basic_publish(exchange='', routing_key='owner', body='hello!!')
